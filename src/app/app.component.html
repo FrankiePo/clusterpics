@@ -1,3 +1,38 @@
-<h1>
-  {{title}}
-</h1>
+<style>
+  .col {
+    align-self: flex-start;
+  }
+  .left-col {
+    margin: 10px;
+  }
+</style>
+<md-toolbar color="primary">
+  <button md-button>
+    <md-icon class="md-24">home</md-icon>
+    <span>ClusterPics</span>
+  </button>
+  <button md-button title="Toggle fullscreen">
+    Button
+  </button>
+  <button md-button class="pull-right" title="Toggle between RTL and LTR">
+    Fork on GitHub
+  </button>
+</md-toolbar>
+<md-grid-list cols="2">
+  <md-grid-tile [colspan]="1" [rowspan]="1">
+    <div class="col left-col">
+      <app-form></app-form>
+      <app-item></app-item>
+    </div>
+  </md-grid-tile>
+  <md-grid-tile [colspan]="1" [rowspan]="1">
+    <md-tab-group style="width: 100%" class="col">
+      <md-tab label="Map">
+        <app-map></app-map>
+      </md-tab>
+      <md-tab label="Table">
+        <app-table></app-table>
+      </md-tab>
+    </md-tab-group>
+  </md-grid-tile>
+</md-grid-list>
