@@ -1,6 +1,21 @@
 # Clusterpics
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+Front-end для классификатора изображений. Позволяет классифицировать картинки по геотегу, времени, содержимому. Отображать в виде таблицы и в виде карты.
+
+### Компоненты:
+
+* Карта с кластеризацией по геотегу.
+* Таблица с отображением поиска.
+* Форма для поиска.
+* Предпросмотр одной фотографии.
+* Сервис с данными(возможно с фильтрацией).
+
+### План:
+
+* 24 марта — разбиение на компоненты
+* 14 апреля — реализация основных компонент
+* 21 апреля — получение общего фидбека, правки
+* 28 апреля — защита
 
 ## Development server
 
@@ -12,7 +27,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build -prod --base-href \"/clusterpics/\"` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Publish to gh-pages
+Run `ngh` to push dist folder to `gh-pages` branch.
 
 ## Running unit tests
 
